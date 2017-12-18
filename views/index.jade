@@ -1,0 +1,14 @@
+extends layout
+
+block content
+  h2= "CS309 Final Project"
+  a(href="/querybyname")
+   input(type="button", value="Query Playlists by Name", name="QPBN")
+  br
+  a(href="/querybyplaylist")
+   input(type="button", value="Query Tracks by PlaylistID", name="QTBP")
+  br
+  a(href="/querybycustomer")
+   input(type="button", value="Query Customer Details by CustomerID", name="QCBC")
+  #query
+  #display

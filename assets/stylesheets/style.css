@@ -1,0 +1,78 @@
+body {
+	background-color: #4c5b63;
+}
+h1 {
+  color: #E2FF99;
+  background-color: orange;
+}
+h2 {
+  color: orange;
+  text-align: center;
+}
+
+h4 {
+	color: white;
+}
+
+p {
+  text-indent: 1cm;
+  color: white;
+  text-align: center;
+
+}
+
+::placeholder {
+	color:white;
+}
+
+
+
+#output {
+  font-style: italic;
+  color: d3fffe;
+  padding: 20px;
+  display: inline-block;
+  text-align: center;
+}
+input{
+  background-color: #ffe08c;
+  box-sizing: border-box;
+  background-color:#567ab5;
+  text-align: center;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  
+}
+
+input:hover{
+	background-color:blue;
+}
+
+input:focus{
+	background-color: orange;
+}
+	 
+input[type=text] 
+{
+	padding: 12px 20px;
+	color: white;
+	box-sizing: border-box;
+	width: 100%;
+}
+
+input[type=date]
+{
+	width: 15%;
+	text-align: center;
+}
+
+input[type=button]
+{
+	width: 50%;
+	padding: 12px 20px;
+}
+
+.submitClaim:hover{
+	background-color: pink;
+	color: black;
+}

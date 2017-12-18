@@ -1,0 +1,12 @@
+extends layout
+
+block content
+  h2= "Query Customer Information via Customer ID"
+  p= "Please Enter The Customer ID of the Customer You'd Like To Query Below"
+  form(name="qcbc", action="/querybycustomer", method="post")
+   input(type="text", name="customerid", placeholder="EG: 247")
+   input(type="submit", value="Submit Query")
+  #output
+  ul#CustomerInfo
+   each customer in cinfo
+    li= customer

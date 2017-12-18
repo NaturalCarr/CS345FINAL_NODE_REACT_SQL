@@ -1,0 +1,12 @@
+extends layout
+
+block content
+  h2= "Query Track Information via Track name or ID"
+  p= "Please Enter The Name or If of the Track You'd Like To Query Below"
+  form(name="qbpn", action="/querybyname", method="post")
+   input(type="text", name="tname", placeholder="EG: Me & Mr. Jones")
+   input(type="submit", value="Submit Query")
+  #output
+  ul#CustomerInfo
+   each info in tinfo
+    li= info

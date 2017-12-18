@@ -1,0 +1,12 @@
+extends layout
+
+block content
+  h1= title
+  br
+  h4 Hello, User. Please Enter Your Username and Password to Log In.
+  p If you do not have a username and password, please register them.
+  form(name="login", action="/", method="post")
+   input(type="text", name="username", placeholder="USERNAME")
+   input(type="text", name="password", placeholder="PASSWORD")
+   input(type="submit", value="Register", name="logreg")
+   input(type="submit", value="Login", name="logreg")
