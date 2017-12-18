@@ -13,7 +13,6 @@ router.post('/', function(req, res, next) {
   var logreg = req.body.logreg;
   var usn = req.body.username;
   var usp = req.body.password;
-  console.log(usn + " " + usp);
   let chinook = new sqlite3.Database('./database/chinook.db', (err) => {
     if (err)
     {
@@ -35,10 +34,10 @@ router.post('/', function(req, res, next) {
   chinook.close((err) => {
     if (err) { return console.error(err.message); }
     if (logreg == "Login"){
-    if (temp == null || temp === '0' || temp == [] || temp == "" || temp === null) {
-      console.log ('Failed Login Attempt | UN: ' + usn + 'UP: ' + usp);
-      res.status(401);
-      res.send('Invalid Username and/or Password, Login Attempt Logged');
+      if (temp == null || temp === '0' || temp == [] || temp == "" || temp === null) {
+        console.log ('Failed Login Attempt | Username: ' + usn + ' Password: ' + usp);
+        res.status(401);
+        res.send('Invalid Username and/or Password, Login Attempt Logged');
     }
     else if (usp == temp) {
       res.render('index', { title: 'CS309 Final Project' });
@@ -52,6 +51,4 @@ router.post('/', function(req, res, next) {
     console.log('Close The Database Connection');
     });
 });
-
-function callback(row){ temp = row; }
 module.exports = router;

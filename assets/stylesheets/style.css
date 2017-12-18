@@ -25,7 +25,10 @@ p {
 	color:white;
 }
 
-
+ul {
+	text-align: center;
+	color: white;
+}
 
 #output {
   font-style: italic;
@@ -41,7 +44,7 @@ input{
   text-align: center;
   border: 2px solid #ccc;
   border-radius: 4px;
-  
+
 }
 
 input:hover{
@@ -51,8 +54,8 @@ input:hover{
 input:focus{
 	background-color: orange;
 }
-	 
-input[type=text] 
+
+input[type=text]
 {
 	padding: 12px 20px;
 	color: white;
@@ -68,7 +71,7 @@ input[type=date]
 
 input[type=button]
 {
-	width: 50%;
+	width: 100%;
 	padding: 12px 20px;
 }
 
