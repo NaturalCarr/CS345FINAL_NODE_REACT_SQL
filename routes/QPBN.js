@@ -13,6 +13,7 @@ router.get('/', function(req, res, next) {
 router.post('/', function(req, res, next) {
   var tinfo = ["No Track Selected"];
   var query ="";
+  var iter = 0;
   let chinook = new sqlite3.Database('./database/chinook.db', (err) => {
     if (err)
     {
@@ -22,9 +23,10 @@ router.post('/', function(req, res, next) {
   });
 
   chinook.serialize(() => {
-  chinook.each("SELECT name as tname, AlbumId as albumid, bytes as bsize, milliseconds as time FROM tracks WHERE tracks.name= '" + req.body.tname.toString() + "'", (err, row) => {
+  chinook.each("SELECT name as tname, AlbumId as albumid, bytes as bsize, milliseconds as time FROM tracks WHERE tracks.name LIKE  '%" + req.body.tname.toString() + "%'", (err, row) => {
     if (err) { console.error(err.message);}
-    tinfo[0] = ("Name: " + row.tname + " | AlbumID: " + row.albumId + " | Size: " + (Number(row.bsize) / 1048576 ) + " Megabytes | Length: " + row.time + " Milliseconds");
+    tinfo[iter] = ("Name: " + row.tname + " | AlbumID: " + row.albumId + " | Size: " + (Number(row.bsize) / 1048576 ) + " Megabytes | Length: " + row.time + " Milliseconds");
+    iter++;
   });
 
 });

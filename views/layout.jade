@@ -1,7 +1,18 @@
 doctype html
 html
+  link(rel='stylesheet', href='/stylesheets/style.css')
   head
-    title= title
-    link(rel='stylesheet', href='/stylesheets/style.css')
+    #navbar
+      ul#navbar1
+       li
+        a(href="/querybyname")
+         input(type="button", value="Query Playlists by Name", name="QPBN")
+       li
+        a(href="/querybyplaylist")
+         input(type="button", value="Query Tracks by PlaylistID", name="QTBP")
+       li
+        a(href="/querybycustomer")
+         input(type="button", value="Query Customer Details by CustomerID", name="QCBC")
+
   body
     block content

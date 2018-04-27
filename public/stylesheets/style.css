@@ -25,7 +25,10 @@ p {
 	color:white;
 }
 
-
+ul {
+	text-align: center;
+	color: white;
+}
 
 #output {
   font-style: italic;
@@ -34,6 +37,39 @@ p {
   display: inline-block;
   text-align: center;
 }
+
+
+#navbar ul {
+	list-style-type:none;
+	margin: 0px;
+	display: inline;
+	width: 100%;
+position: fixed;
+	bottom: 0;
+	overflow: auto;
+	text-align: center;
+	}
+
+#navbar li {
+	display: inline;
+	text-align: center;
+	width: 30%;
+}
+#navbar li a {
+	display: inline;
+	color: green;
+	text-decoration:none;
+	border-right-style: solid;
+	border-right-color: lightgray;
+	text-align: center;
+
+}
+
+
+#navbar li:last-child {
+	border-bottom: none;
+}
+}
 input{
   background-color: #ffe08c;
   box-sizing: border-box;
@@ -41,7 +77,7 @@ input{
   text-align: center;
   border: 2px solid #ccc;
   border-radius: 4px;
-  
+
 }
 
 input:hover{
@@ -51,8 +87,8 @@ input:hover{
 input:focus{
 	background-color: orange;
 }
-	 
-input[type=text] 
+
+input[type=text]
 {
 	padding: 12px 20px;
 	color: white;
@@ -68,7 +104,7 @@ input[type=date]
 
 input[type=button]
 {
-	width: 50%;
+	width: 100%;
 	padding: 12px 20px;
 }
 
